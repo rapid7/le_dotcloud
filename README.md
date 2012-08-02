@@ -28,7 +28,7 @@ This will prompt you for your user credentials for the account you made on Logen
 
 The next step is to choose which logs you wish to follow.
 
-The default set-up on DotCloud contains the nginx logs in `/var/log/nginx/`
+The default set-up on DotCloud stores the nginx logs in `/var/log/nginx/`
 
 Navigate to this folder. If there is a log called myapp-access.log you would run:
 
@@ -38,7 +38,7 @@ With this, you are ready to activate the logging agent.
 
 Exit the ssh connection, and download the supervisord.conf file which controls our logging agent.
 
-Place this in your project or if you have an existing file, copy the text in.
+Place this in your project or if you have an existing file, copy the text into that.
 
 On your next deploy, the Logentries logging agent will be activated and you will begin to see
 log events on Logentries.
