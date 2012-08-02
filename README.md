@@ -8,7 +8,7 @@ Firsly you must register an account on Logentries.com, this only takes a few sec
 Dotcloud Setup
 --------------
 
-Next you must ssh into your app that wish to stream logs from.
+Next you must ssh into your app that you wish to stream logs from.
 
 E.g:   `dotcloud ssh myapp.www`
 
@@ -26,13 +26,13 @@ Now you need to download our logging agent and register it.
 
 This will prompt you for your user credentials for the account you made on Logentries.
 
-The next step if to choose which logs you wish to follow.
+The next step is to choose which logs you wish to follow.
 
 The default set-up on DotCloud contains the nginx logs in `/var/log/nginx/`
 
-Navigate to this folder. If there was a log called myapp-access.log you would run:
+Navigate to this folder. If there is a log called myapp-access.log you would run:
 
-`~/data/le follow myapp-access.log`
+`~/data/le follow myapp-access.log`  ensuring that you give the right path for the log file.
 
 With this, you are ready to activate the logging agent.
 
@@ -42,5 +42,3 @@ Place this in your project or if you have an existing file, copy the text in.
 
 On your next deploy, the Logentries logging agent will be activated and you will begin to see
 log events on Logentries.
-
-
