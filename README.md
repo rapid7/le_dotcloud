@@ -20,9 +20,7 @@ This folder name is recognised by dotcloud as persistent storage that won't be o
 
 Now you need to download our logging agent and register it.
 
-`wget ... && chmod +x le`
-
-`./le register`
+`wget https://github.com/logentries/le_dotcloud/raw/master/le && chmod +x le && ./le register`
 
 This will prompt you for your user credentials for the account you made on Logentries.
 
