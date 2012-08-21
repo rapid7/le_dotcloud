@@ -14,6 +14,7 @@ wget -q -O /home/dotcloud/le https://github.com/logentries/le_dotcloud/raw/maste
 chmod +x /home/dotcloud/le
 
 # Check if the config exists, indicating server has already been registered
+# TODO - This isn't working, it appears ~/data is moved before postinstall is run
 if [ ! -f "/home/dotcloud/data/.le/config" ]; then
 
 	/home/dotcloud/le register --user-key=$key
