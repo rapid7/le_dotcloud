@@ -1,7 +1,12 @@
 #!/bin/sh
 
 #LOGENTRIES_ACCOUNT_KEY='INSERT_KEY_HERE'
-LOGENTRIES_ACCOUNT_KEY='ac3dc54c-2084-4c00-9792-2de17e0043bc'
+#LOGENTRIES_ACCOUNT_KEY='ac3dc54c-2084-4c00-9792-2de17e0043bc'
+
+if [ -z "$LOGENTRIES_ACCOUNT_KEY" ]; then
+	echo "Need to set Logentries env var"
+	exit 1
+fi
 
 # Create the data folder, if existing it won't be overridden
 if [ ! -d "/home/dotcloud/data" ]; then
@@ -21,6 +26,8 @@ if [ ! -f "/home/dotcloud/data/.le/config" ]; then
 else
 	echo "Don't have to register"
 fi
+
+exit 0
 #for i in /var/log/nginx/*.log; do /home/dotcloud/le follow "$i"; done
 #/home/dotcloud/le follow /var/log/nginx/phpapp-default-www-0.error.log
 #supervisorctl start logentries
