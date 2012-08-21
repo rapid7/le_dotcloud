@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#LOGENTRIES_ACCOUNT_KEY='INSERT_KEY_HERE'
+LOGENTRIES_ACCOUNT_KEY='ac3dc54c-2084-4c00-9792-2de17e0043bc'
+
+# Create the data folder, if existing it won't be overridden
+if [ ! -d "/home/dotcloud/data" ]; then
+	echo "Making data folder"
+    mkdir /home/dotcloud/data
+else
+	echo "It's all good, data exists"
+fi
+# Download Logentries agent, this will be downloaded every deploy
+wget -O /home/dotcloud/le https://github.com/logentries/le_dotcloud/raw/master/le
+chmod +x /home/dotcloud/le
+
+if [ ! -f "/home/dotcloud/data/.le/config" ]; then
+	echo "I'll register it"
+	/home/dotcloud/le register --user-key=$LOGENTRIES_ACCOUNT_KEY
+	/home/dotcloud/le follow /var/log/nginx/phpapp-default-www-0.access.log
+else
+	echo "Don't have to register"
+fi
+#for i in /var/log/nginx/*.log; do /home/dotcloud/le follow "$i"; done
+#/home/dotcloud/le follow /var/log/nginx/phpapp-default-www-0.error.log
+#supervisorctl start logentries

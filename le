@@ -21,7 +21,7 @@ DEFAULT_AGENT_KEY = NOT_SET
 
 # Configuration files
 CONFIG_DIR_SYSTEM = '/etc/le'
-CONFIG_DIR_USER = '.le'
+CONFIG_DIR_USER = '/data/.le'
 LE_CONFIG = 'config'
 LE_CERT_NAME = 'ca-certs.pem'
 PID_FILE = '/var/run/logentries.pid'
