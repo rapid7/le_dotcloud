@@ -1,33 +1,25 @@
-#!/bin/sh
+#/bin/sh
 
-#LOGENTRIES_ACCOUNT_KEY='INSERT_KEY_HERE'
-#LOGENTRIES_ACCOUNT_KEY='ac3dc54c-2084-4c00-9792-2de17e0043bc'
-
-if [ -z "$LOGENTRIES_ACCOUNT_KEY" ]; then
-	echo "Need to set Logentries env var"
-	exit 1
-fi
+#This requires that user runs 'dotcloud var set app LOGENTRIES_KEY=abcdef......' before adding this script to their app
+key=$(cat /home/dotcloud/environment.json | /usr/bin/python -c 'import json,sys;obj=json.loads(sys.stdin.read());print obj["'"LOGENTRIES_ACCOUNT_KEY"'"]')
+nodename=$(uname -n)
 
 # Create the data folder, if existing it won't be overridden
 if [ ! -d "/home/dotcloud/data" ]; then
-	echo "Making data folder"
     mkdir /home/dotcloud/data
-else
-	echo "It's all good, data exists"
 fi
-# Download Logentries agent, this will be downloaded every deploy
-wget -O /home/dotcloud/le https://github.com/logentries/le_dotcloud/raw/master/le
+
+# Quietly download Logentries agent, this will be downloaded every deploy
+wget -q -O /home/dotcloud/le https://github.com/logentries/le_dotcloud/raw/master/le
 chmod +x /home/dotcloud/le
 
+# Check if the config exists, indicating server has already been registered
 if [ ! -f "/home/dotcloud/data/.le/config" ]; then
-	echo "I'll register it"
-	/home/dotcloud/le register --user-key=$LOGENTRIES_ACCOUNT_KEY
-	/home/dotcloud/le follow /var/log/nginx/phpapp-default-www-0.access.log
-else
-	echo "Don't have to register"
+
+	/home/dotcloud/le register --user-key=$key
+
+	/home/dotcloud/le follow "/var/log/nginx/$nodename.access.log"
+	/home/dotcloud/le follow "/var/log/nginx/$nodename.error.log"	
 fi
 
 exit 0
-#for i in /var/log/nginx/*.log; do /home/dotcloud/le follow "$i"; done
-#/home/dotcloud/le follow /var/log/nginx/phpapp-default-www-0.error.log
-#supervisorctl start logentries
