@@ -11,7 +11,7 @@
 # Constants
 #
 
-VERSION = "1.0.8"
+VERSION = "1.1.1"
 
 NOT_SET = None
 
@@ -21,8 +21,7 @@ DEFAULT_AGENT_KEY = NOT_SET
 
 # Configuration files
 CONFIG_DIR_SYSTEM = '/etc/le'
-# Dotcloud Specific location
-CONFIG_DIR_USER = 'data/.le'
+CONFIG_DIR_USER = '.le'
 LE_CONFIG = 'config'
 LE_CERT_NAME = 'ca-certs.pem'
 PID_FILE = '/var/run/logentries.pid'
@@ -237,6 +236,50 @@ tQWVYrmm3ok9Nns4d0iXrKYgjy6myQzCsplFAMfOEVEiIuCl6rYVSAlk6l5PdPcF
 PseKUgzbFbS9bZvlxrFUaKnjaZC2mqUPuLk/IH2uSrW4nOQdtqvmlKXBx4Ot2/Un
 hw4EbNX/3aBd7YdStysVAq45pmp06drE57xNNB6pXE0zX5IJL4hmXXeXxx12E6nV
 5fEWCRE11azbJHFwLJhWC9kXtNHjUStedejV0NxPNO3CBWaAocvmMw==
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIID2TCCAsGgAwIBAgIDAjbQMA0GCSqGSIb3DQEBBQUAMEIxCzAJBgNVBAYTAlVT
+MRYwFAYDVQQKEw1HZW9UcnVzdCBJbmMuMRswGQYDVQQDExJHZW9UcnVzdCBHbG9i
+YWwgQ0EwHhcNMTAwMjE5MjIzOTI2WhcNMjAwMjE4MjIzOTI2WjBAMQswCQYDVQQG
+EwJVUzEXMBUGA1UEChMOR2VvVHJ1c3QsIEluYy4xGDAWBgNVBAMTD0dlb1RydXN0
+IFNTTCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJCzgMHk5Uat
+cGA9uuUU3Z6KXot1WubKbUGlI+g5hSZ6p1V3mkihkn46HhrxJ6ujTDnMyz1Hr4Gu
+FmpcN+9FQf37mpc8oEOdxt8XIdGKolbCA0mEEoE+yQpUYGa5jFTk+eb5lPHgX3UR
+8im55IaisYmtph6DKWOy8FQchQt65+EuDa+kvc3nsVrXjAVaDktzKIt1XTTYdwvh
+dGLicTBi2LyKBeUxY0pUiWozeKdOVSQdl+8a5BLGDzAYtDRN4dgjOyFbLTAZJQ50
+96QhS6CkIMlszZhWwPKoXz4mdaAN+DaIiixafWcwqQ/RmXAueOFRJq9VeiS+jDkN
+d53eAsMMvR8CAwEAAaOB2TCB1jAOBgNVHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFEJ5
+VBthzVUrPmPVPEhX9Z/7Rc5KMB8GA1UdIwQYMBaAFMB6mGiNifurBWQMEX2qfWW4
+ysxOMBIGA1UdEwEB/wQIMAYBAf8CAQAwOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDov
+L2NybC5nZW90cnVzdC5jb20vY3Jscy9ndGdsb2JhbC5jcmwwNAYIKwYBBQUHAQEE
+KDAmMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5nZW90cnVzdC5jb20wDQYJKoZI
+hvcNAQEFBQADggEBANTvU4ToGr2hiwTAqfVfoRB4RV2yV2pOJMtlTjGXkZrUJPji
+J2ZwMZzBYlQG55cdOprApClICq8kx6jEmlTBfEx4TCtoLF0XplR4TEbigMMfOHES
+0tdT41SFULgCy+5jOvhWiU1Vuy7AyBh3hjELC3DwfjWDpCoTZFZnNF0WX3OsewYk
+2k9QbSqr0E1TQcKOu3EDSSmGGM8hQkx0YlEVxW+o78Qn5Rsz3VqI138S0adhJR/V
+4NwdzxoQ2KDLX4z6DOW/cf/lXUQdpj6HR/oaToODEj+IZpWYeZqF6wJHzSXj8gYE
+TpnKXKBuervdo5AaRTPvvz7SBMS24CqFZUE+ENQ=
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIDfTCCAuagAwIBAgIDErvmMA0GCSqGSIb3DQEBBQUAME4xCzAJBgNVBAYTAlVT
+MRAwDgYDVQQKEwdFcXVpZmF4MS0wKwYDVQQLEyRFcXVpZmF4IFNlY3VyZSBDZXJ0
+aWZpY2F0ZSBBdXRob3JpdHkwHhcNMDIwNTIxMDQwMDAwWhcNMTgwODIxMDQwMDAw
+WjBCMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEbMBkGA1UE
+AxMSR2VvVHJ1c3QgR2xvYmFsIENBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA2swYYzD99BcjGlZ+W988bDjkcbd4kdS8odhM+KhDtgPpTSEHCIjaWC9m
+OSm9BXiLnTjoBbdqfnGk5sRgprDvgOSJKA+eJdbtg/OtppHHmMlCGDUUna2YRpIu
+T8rxh0PBFpVXLVDviS2Aelet8u5fa9IAjbkU+BQVNdnARqN7csiRv8lVK83Qlz6c
+JmTM386DGXHKTubU1XupGc1V3sjs0l44U+VcT4wt/lAjNvxm5suOpDkZALeVAjmR
+Cw7+OC7RHQWa9k0+bw8HHa8sHo9gOeL6NlMTOdReJivbPagUvTLrGAMoUgRx5asz
+PeE4uwc2hGKceeoWMPRfwCvocWvk+QIDAQABo4HwMIHtMB8GA1UdIwQYMBaAFEjm
+aPkr0rKV10fYIyAQTzOYkJ/UMB0GA1UdDgQWBBTAephojYn7qwVkDBF9qn1luMrM
+TjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjA6BgNVHR8EMzAxMC+g
+LaArhilodHRwOi8vY3JsLmdlb3RydXN0LmNvbS9jcmxzL3NlY3VyZWNhLmNybDBO
+BgNVHSAERzBFMEMGBFUdIAAwOzA5BggrBgEFBQcCARYtaHR0cHM6Ly93d3cuZ2Vv
+dHJ1c3QuY29tL3Jlc291cmNlcy9yZXBvc2l0b3J5MA0GCSqGSIb3DQEBBQUAA4GB
+AHbhEm5OSxYShjAGsoEIz/AIx8dxfmbuwu3UOx//8PDITtZDOLC5MH0Y0FWDomrL
+NhGc6Ehmo21/uBPUR/6LWlxz/K7ZGzIZOKuXNBSqltLroxwUCEm2u+WR74M26x1W
+b8ravHNjkOR/ez4iyz0H7V84dJzjA1BOoa+Y7mHyhD8S
 -----END CERTIFICATE-----"""
 authority_certificate_files = [
 	# Debian 5.0, Debian 6.0, Ubuntu 9.10, Ubuntu 10.4
@@ -1346,15 +1389,6 @@ class Config:
 				return False
 		return True
 		
-	def create_conf_dir(self):
-		# Create logentries config
-		try:
-			os.makedirs( self.config_dir_name)
-		except OSError, e:
-			if e.errno != errno.EEXIST:
-				if e.errno == errno.EACCES:
-					die( "You don't have permission to create /etc/logentries config file. Please run logentries agent as root.")
-				die( 'Error: %s'%e)
 
 	def basic_setup(self):
 		pass
@@ -1408,7 +1442,7 @@ class Config:
 		"""
 		try:
 			conf = ConfigParser.SafeConfigParser()
-			self.create_conf_dir()
+			create_conf_dir()
 			conf_file = open( self.config_filename, 'wb')
 			conf.add_section( MAIN_SECT)
 			if self.user_key != NOT_SET:
@@ -1422,10 +1456,6 @@ class Config:
 			if self.suppress_ssl:
 				conf.set( MAIN_SECT, SUPPRESS_SSL_PARAM, 'True')
 			conf.write( conf_file)
-
-			cert_filename = self.config_dir_name +LE_CERT_NAME;
-			if not os.path.exists( cert_filename):
-				open( cert_filename, 'w').write( authority_certificate)
 		except IOError, e:
 			die( "Error: IO error when writing to config file: %s"%e)
 
@@ -1723,20 +1753,69 @@ if os.name != "posix":
 	    config.user_key_required()
 	    stwinservice(WinStart, 'Logentries', 'Logentries')
 
+
+def default_cert_file_name():
+	"""
+	Construct full file name to the default certificate file.
+	"""
+	return config.config_dir_name +LE_CERT_NAME
+
+
+def create_conf_dir():
+	"""
+	Creates directory for the configuration file.
+	"""
+	# Create logentries config
+	try:
+		os.makedirs( config.config_dir_name)
+	except OSError, e:
+		if e.errno != errno.EEXIST:
+			if e.errno == errno.EACCES:
+				die( "You don't have permission to create logentries config file. Please run logentries agent as root.")
+			die( 'Error: %s'%e)
+
+
+def write_default_cert_file():
+	"""
+	Writes default certificate file in the configuration directory.
+	"""
+	create_conf_dir()
+	cert_filename = default_cert_file_name()
+	f = open( cert_filename, 'wb')
+	f.write( authority_certificate)
+	f.close()
 	
 
-def find_cert_file():
+def default_cert_file():
 	"""
-	Finds the location of the certificate of our lovely site.
+	Returns location of the default certificate file or None. It tries to write the
+	certificate file if it is not there or it is outdated.
+	"""
+	cert_filename = default_cert_file_name()
+	try:
+		# If the certificate file is not there, create it
+		if not os.path.exists( cert_filename):
+			write_default_cert_file()
+			return cert_filename
+
+		# If it is there, check if it is outdated
+		curr_cert = rfile( cert_filename)
+		if curr_cert != authority_certificate:
+			write_default_cert_file()
+	except IOError:
+		# Cannot read/write certificate file, ignore
+		return None
+	return cert_filename
+
+
+def system_cert_file():
+	"""
+	Finds the location of our lovely site's certificate on the system or None.
 	"""
 	for f in authority_certificate_files:
 		if os.path.exists( f):
 			return f
-	f = config.config_dir_name +LE_CERT_NAME
-	if os.path.exists( f):
-		return f
-	
-	die( "Error: Certificate not found. If the site certificate is not installed by OS distribution you have to set it up by the init command.")
+	return None
 
 def create_connection( host, port):
 	"""
@@ -1757,13 +1836,16 @@ def create_connection( host, port):
 
 
 class ServerHTTPSConnection(httplib.HTTPSConnection):
-	"""A slight modification of HTTPSConnection to verify the certificate"""
+	"""
+	A slight modification of HTTPSConnection to verify the certificate
+	"""
 
-	def __init__(self, server):
+	def __init__(self, server, cert_file):
 		if no_ssl:
 			httplib.HTTPSConnection.__init__( self, server)
 		else:
-			httplib.HTTPSConnection.__init__( self, server, cert_file=find_cert_file())
+			self.cert_file = cert_file
+			httplib.HTTPSConnection.__init__( self, server, cert_file=cert_file)
 
 	def connect(self):
 		if no_ssl:
@@ -1775,6 +1857,26 @@ class ServerHTTPSConnection(httplib.HTTPSConnection):
 				self._tunnel()
 		except AttributeError: pass
 		self.sock = wrap_socket( sock, ca_certs=self.cert_file, cert_reqs=CERT_REQUIRED)
+
+
+def make_https_connection( s):
+	"""
+	Makes HTTPS connection. Tried all available certificates.
+	"""
+	# Try to connect with system certificate
+	try:
+		cert_file = system_cert_file()
+		if cert_file:
+			return ServerHTTPSConnection( s, cert_file)
+	except socket.error:
+		pass
+	
+	# Try to connect with our default certificate
+	cert_file = default_cert_file()
+	if not cert_file:
+		die( 'Error: Cannot find suitable CA certificate.')
+	return ServerHTTPSConnection( s, cert_file)
+	# Pass the exception
 
 
 def domain_connect(api=True):
@@ -1807,7 +1909,7 @@ def domain_connect(api=True):
 
 	# Pass the connection
 	if use_ssl:
-		return ServerHTTPSConnection( s)
+		return make_https_connection( s)
 	else:
 		return httplib.HTTPConnection( s)
 
