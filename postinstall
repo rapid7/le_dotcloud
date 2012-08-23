@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 #This requires that user runs 'dotcloud var set app LOGENTRIES_ACCOUNT_KEY=abcdef......' before adding this script to their app
 key=$(cat /home/dotcloud/environment.json | /usr/bin/python -c 'import json,sys;obj=json.loads(sys.stdin.read());print obj["'"LOGENTRIES_ACCOUNT_KEY"'"]')
