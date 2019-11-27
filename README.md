@@ -2,7 +2,6 @@ Logentries to Logentries from DotCloud
 =======================================
 
 *This plug in will no longer be officially supported or maintained by Logentries.<br>
-If you would be interested in maintaining this project, please contact support@logentries.com.*
 
 With these simple steps you can send your DotCloud application logs to Logentries.
 
